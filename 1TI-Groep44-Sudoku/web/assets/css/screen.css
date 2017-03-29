@@ -1,21 +1,18 @@
 body{
-    font-size: 200px;
+    width: 100%;
+    font-family:sans-serif;
+    background-image: url("../media/standard-background.png");
+    background-size: 1500px;
+    background-repeat: no-repeat;
+    
 }
-input[type='button']{
-    width: 200px;
-    height: 200px;
-    font-size: 50px;
-    display: inline-block;
+#wrapper{
+    width: 500px;
+    margin-left: auto;
+    margin-right:auto;
+    
 }
-.red{
-    background-color: red;
-}
-.green{
-     background-color: green;
-}
-.orange{
-    background-color: orange;
-}
-.yellow{
-    background-color: yellow;
+#wrapper form{
+    text-align: center;
+    margin-left: 300px;
 }
