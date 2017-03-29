@@ -16,9 +16,56 @@ body{
     text-align: center;
     margin-left: 300px;
 }
-
+input[type="button"]{
+    margin-bottom: 20px;
+}
 #button-play{
   background: url("../media/play-game.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 65px;
+  width: 300px;
+  border: none;
+}
+#button-settings{
+  background: url("../media/settings.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 65px;
+  width: 300px;
+  border: none;
+}
+#button-leaderboard{
+  background: url("../media/leaderboard.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 65px;
+  width: 300px;
+  border: none;
+}
+#button-newgame{
+  background: url("../media/new-game.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 65px;
+  width: 300px;
+  border: none;
+}
+#button-resumegame{
+  background: url("../media/resume-game.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 65px;
+  width: 300px;
+  border: none;
+}
+#button-return{
+  background: url("../media/return.png");
   background-size:cover;
   background-repeat: no-repeat;
   cursor: pointer;
