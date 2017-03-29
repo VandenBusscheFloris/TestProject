@@ -28,15 +28,14 @@ private static String prefix = "/1TI-Groep44-Sudoku/API/";
         response.setContentType("application/json;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             String operation = request.getRequestURI().substring(prefix.length());
-            String a = request.getParameter("a");
-            String b = request.getParameter("b");
+            String height = request.getParameter("height");
+            String width = request.getParameter("width");
+            String difficulty = request.getParameter("difficulty");
             
             JsonObject json = Json.createObjectBuilder()
-                    .add("msg", "Hey")
-                    .add("url", request.getRequestURI())
                     .add("operation", operation)
-                    .add("a", ""+a)
-                    .add("b", ""+b)
+                    .add("size", width +"x"+height)
+                    .add("difficulty", difficulty)
                     .build();
             out.println(json);
         }
