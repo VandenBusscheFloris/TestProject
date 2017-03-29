@@ -16,3 +16,13 @@ body{
     text-align: center;
     margin-left: 300px;
 }
+
+#button-play{
+  background: url("../media/play-game.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 65px;
+  width: 300px;
+  border: none;
+}
