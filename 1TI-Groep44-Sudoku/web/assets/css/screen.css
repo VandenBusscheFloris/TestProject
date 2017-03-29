@@ -1,0 +1,21 @@
+body{
+    font-size: 200px;
+}
+input[type='button']{
+    width: 200px;
+    height: 200px;
+    font-size: 50px;
+    display: inline-block;
+}
+.red{
+    background-color: red;
+}
+.green{
+     background-color: green;
+}
+.orange{
+    background-color: orange;
+}
+.yellow{
+    background-color: yellow;
+}
