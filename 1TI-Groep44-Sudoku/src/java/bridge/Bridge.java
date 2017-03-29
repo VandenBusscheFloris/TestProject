@@ -2,6 +2,7 @@ package bridge;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.math.BigDecimal;
 import javax.json.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "Bridge", urlPatterns = {"/API/*"})
 public class Bridge extends HttpServlet {
+private static String prefix = "/1TI-Groep44-Sudoku/API/";
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -25,9 +27,16 @@ public class Bridge extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("application/json;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
+            String operation = request.getRequestURI().substring(prefix.length());
+            String a = request.getParameter("a");
+            String b = request.getParameter("b");
+            
             JsonObject json = Json.createObjectBuilder()
                     .add("msg", "Hey")
+                    .add("url", request.getRequestURI())
+                    .add("operation", operation)
+                    .add("a", ""+a)
+                    .add("b", ""+b)
                     .build();
             out.println(json);
         }
