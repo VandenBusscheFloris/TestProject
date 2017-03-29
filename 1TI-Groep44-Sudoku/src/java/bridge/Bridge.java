@@ -2,13 +2,14 @@ package bridge;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.json.*;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "Bridge", urlPatterns = {"/Bridge"})
+@WebServlet(name = "Bridge", urlPatterns = {"/API/*"})
 public class Bridge extends HttpServlet {
 
     /**
@@ -22,18 +23,13 @@ public class Bridge extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("application/json;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Bridge</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Bridge at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+            JsonObject json = Json.createObjectBuilder()
+                    .add("msg", "Hey")
+                    .build();
+            out.println(json);
         }
     }
 
